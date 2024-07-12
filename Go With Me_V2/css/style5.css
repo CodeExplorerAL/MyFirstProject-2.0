@@ -1,0 +1,95 @@
+/* 資訊區_卡片 */
+.feature-card {
+    height: 100%;
+
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 資訊區_卡片 懸停效果 */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 資訊區_卡片_食譜 */
+.recipe-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 資訊區_卡片_訂閱 */
+.subscribe-card {
+    background-color: #e8f5e9;
+}
+
+/* 資訊區_卡片_Line */
+.line-card {
+    background-color: #e3f2fd;
+}
+
+/* 資訊區_卡片_APP */
+.app-card {
+    background-color: #fff3e0;
+}
+
+/* 資訊區_卡片_優惠 */
+.promo-card {
+    background-color: #f3e5f5;
+}
+
+/* 資訊區_卡片_客服 */
+.service-card {
+    background-color: #e0f7fa;
+}
+
+/* 資訊區_卡片內標題 */
+.card-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 資訊區_卡片內文字 */
+.card-text {
+    margin-bottom: 20px;
+}
+
+/* 資訊區_熱門優惠_icon */
+.feature-card .fas {
+    color: #4caf50;
+}
+
+
+/* 多媒體裝置(<991) */
+@media (max-width: 991px) {
+
+    /* 資訊區_卡片 */
+    .feature-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* 回到頂部 */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 7px 15px 5px;
+    border-radius: 10px;
+
+}
+
+/* 回到頂部  懸停效果 */
+#myBtn:hover {
+    background-color: #333;
+}

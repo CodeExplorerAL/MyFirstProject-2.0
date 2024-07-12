@@ -1,0 +1,162 @@
+/* 產品輪播圖 */
+.container_productCarousel {
+    padding: 2rem 0;
+}
+
+/* 產品輪播圖_標題 */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+/* 產品輪播圖_上下張控制按鈕 */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* 產品輪播圖_上下張控制按鈕_icon */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* 產品輪播圖_卡片區 */
+.product-card {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* 產品輪播圖_卡片區 懸停效果 */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 產品輪播圖_卡片區_相片 */
+.product-image {
+    width: 100%;
+
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 產品輪播圖_卡片區_資訊 */
+.product-info {
+    padding: 1rem;
+}
+
+/* 產品輪播圖_卡片區_資訊_產品名 */
+.product-info h3 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+}
+
+/* 產品輪播圖_卡片區_資訊_價錢 */
+.price {
+    font-weight: bold;
+    color: #e44d26;
+}
+
+/* 產品輪播圖_開團商品_倒計時 */
+.countdown-timer {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #333;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+/* 產品輪播圖_開團商品_過期效果 */
+.product-card.expired {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* 產品輪播圖_開團商品_過期效果 */
+.product-card.expired .countdown-timer {
+    background-color: #888;
+}
+
+/* 產品輪播圖_產品區 */
+.carousel-item .container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* 產品輪播圖_產品區_列 */
+.carousel-item .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* 產品輪播圖_產品區_產品 */
+.carousel-item [class*='col-'] {
+    padding: 0 10px;
+}
+
+/* 多媒體裝置(<767px) */
+@media (max-width: 767px) {
+
+    /* 產品輪播圖_卡片區 */
+    .product-card {
+        margin-bottom: 1rem;
+    }
+
+    /* 產品輪播圖_卡片區_相片 */
+    .product-image {
+        height: 150px;
+    }
+
+    /* 產品輪播圖_開團商品_倒計時 */
+    .countdown-timer {
+        font-size: 0.8rem;
+    }
+}
+
+/* 多媒體裝置(768~991) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* 產品輪播圖_卡片區_欄位佈置 */
+    .carousel-item .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+}
+
+/* 多媒體裝置(>992) */
+@media (min-width: 992px) {
+
+    .carousel-item .col-lg-2 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* 多媒體裝置(>1200) */
+@media (min-width: 1200px) {
+
+    /* 產品輪播圖_產品區 */
+    .carousel-item .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+}

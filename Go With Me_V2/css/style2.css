@@ -1,0 +1,159 @@
+/* 頂端列&導覽列 */
+.top-wrapper {
+    position: fixed;
+    width: 100%;
+    padding-right: 40px;
+    z-index: 1000;
+    background-color: rgb(251, 246, 240);
+}
+
+/* 4. 導覽列 */
+.custom-navbar {
+    background-color: rgb(251, 246, 240);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+/* 導覽列_項目 */
+.navbar-nav .nav-link {
+    color: #333;
+    font-family: "LXGW WenKai TC", cursive;
+    font-size: 2vw;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* 導覽列_項目在鼠標碰觸時的改變  */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #22c374;
+    background-color: rgba(34, 195, 116, 0.1);
+    border-radius: 5px;
+    /* 圓角 */
+}
+
+/* 導覽列_商品分類選單 */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(236, 235, 224, 0.931);
+    min-width: 100%;
+    min-height: 300%;
+}
+
+/* 導覽列_下拉選單 */
+.dropdown-item {
+    font-size: 1.8vw;
+    font-family: "LXGW WenKai TC", cursive;
+    padding-left: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* 導覽列_商品分類選單_項目在鼠標碰觸時的改變  */
+.dropdown-item:hover {
+    background-color: rgba(34, 195, 116, 0.1);
+    color: #22c374;
+}
+
+/* 搜尋框  */
+.productSearch {
+    border-radius: 20px 0 0 20px;
+    border: 1px solid #ced4da;
+}
+
+/* 搜尋按鈕  */
+.btn-outline-success {
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #ced4da;
+    color: #22c374;
+}
+
+/* 搜尋按鈕 在鼠標碰觸時的改變  */
+.btn-outline-success:hover {
+    background-color: #22c374;
+    color: white;
+}
+
+/* icon 外 */
+.nav-icons {
+    padding: 5px;
+}
+
+/* icon 內 */
+.nav-icon {
+    color: #333;
+    font-size: 1.8vw;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+/* icon 在鼠標碰觸時的改變 */
+.nav-icon:hover {
+    color: #22c374;
+    transform: scale(1.1);
+}
+
+
+
+/* 媒體視窗 */
+@media (max-width: 767px) {
+
+    .custom-navbar {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    /* 隱藏預設的漢堡圖示 */
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    /* 調整漢堡圖示按鈕 */
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+    }
+
+    /* 自定義漢堡圖示 */
+    .navbar-toggler::before {
+        background-image: url('../images/navbar_carrot.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        width: 20px;
+        height: 20px;
+        content: '';
+        transition: transform 0.3s ease;
+    }
+
+    /* 懸停時的旋轉效果 */
+    .navbar-toggler:hover::before {
+        transform: rotate(360deg);
+    }
+
+    /* 菜單分隔號｜消失 */
+    .divider {
+        display: none;
+    }
+
+    /* 可折疊的導覽項目 */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 20%;
+        background-color: rgb(251, 246, 240);
+    }
+
+    /* 搜索框 */
+    .productSearch,
+    .btn-outline-success {
+        height: 90%;
+        /* 高度 */
+        font-size: 10px;
+        /* 字體大小 */
+    }
+}
